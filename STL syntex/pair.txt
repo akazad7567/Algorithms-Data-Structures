@@ -1,0 +1,187 @@
+<<<<<<<<<<<<<vector of pair>>>>>>>>>>
+    vector<pair<int,int> >pr,pr2;
+    int u=1,v=2;
+    pr.push_back(make_pair(u,v));
+    cout<<pr[0].first<<' '<<pr[0].second<<endl; //print 1 2;
+
+
+<<<<<<<<<<<<<vector of pair sort without changing position>>>>>
+///sort first of pair and keeping second
+
+// C++ program to demonstrate sorting in 
+// vector of pair according to 1st element 
+// of pair 
+#include<bits/stdc++.h> 
+using namespace std; 
+
+int main() 
+{ 
+	// Declaring vector of pairs 
+	vector< pair <int,int> > vect; 
+
+	// Initializing 1st and 2nd element of 
+	// pairs with array values 
+	int arr[] = {10, 20, 5, 40 }; 
+	int arr1[] = {30, 60, 20, 50}; 
+	int n = sizeof(arr)/sizeof(arr[0]); 
+
+	// Entering values in vector of pairs 
+	for (int i=0; i<n; i++) 
+		vect.push_back( make_pair(arr[i],arr1[i]) ); 
+
+	// Printing the original vector(before sort()) 
+	cout << "The vector before sort operation is:\n" ; 
+	for (int i=0; i<n; i++) 
+	{ 
+		// "first" and "second" are used to access 
+		// 1st and 2nd element of pair respectively 
+		cout << vect[i].first << " "
+			<< vect[i].second << endl; 
+
+	} 
+
+	// Using simple sort() function to sort 
+	sort(vect.begin(), vect.end()); 
+
+	// Printing the sorted vector(after using sort()) 
+	cout << "The vector after sort operation is:\n" ; 
+	for (int i=0; i<n; i++) 
+	{ 
+		// "first" and "second" are used to access 
+		// 1st and 2nd element of pair respectively 
+		cout << vect[i].first << " "
+			<< vect[i].second << endl; 
+	} 
+
+	return 0; 
+} 
+
+//print
+The vector after applying sort operation is:
+5 20
+10 30
+20 60
+40 50
+
+
+//////////sort second of pair and keeping first/////////////////
+// C++ program to demonstrate sorting in vector 
+// of pair according to 2nd element of pair 
+#include<bits/stdc++.h> 
+using namespace std; 
+
+// Driver function to sort the vector elements 
+// by second element of pairs 
+bool sortbysec(const pair<int,int> &a, 
+			const pair<int,int> &b) 
+{ 
+	return (a.second < b.second); 
+} 
+
+int main() 
+{ 
+	// declaring vector of pairs 
+	vector< pair <int, int> > vect; 
+
+	// Initialising 1st and 2nd element of pairs 
+	// with array values 
+	int arr[] = {10, 20, 5, 40 }; 
+	int arr1[] = {30, 60, 20, 50}; 
+	int n = sizeof(arr)/sizeof(arr[0]); 
+
+	// Entering values in vector of pairs 
+	for (int i=0; i<n; i++) 
+		vect.push_back( make_pair(arr[i],arr1[i]) ); 
+
+	// Printing the original vector(before sort()) 
+	cout << "The vector before sort operation is:\n" ; 
+	for (int i=0; i<n; i++) 
+	{ 
+		// "first" and "second" are used to access 
+		// 1st and 2nd element of pair respectively 
+		cout << vect[i].first << " "
+			<< vect[i].second << endl; 
+
+	} 
+
+	// Using sort() function to sort by 2nd element 
+	// of pair 
+	sort(vect.begin(), vect.end(), sortbysec); 
+
+	// Printing the sorted vector(after using sort()) 
+	cout << "The vector after sort operation is:\n" ; 
+	for (int i=0; i<n; i++) 
+	{ 
+		// "first" and "second" are used to access 
+		// 1st and 2nd element of pair respectively 
+		cout << vect[i].first << " "
+			<< vect[i].second << endl; 
+	} 
+	return 0; 
+} 
+//print
+5 20
+10 30
+40 50
+20 60
+
+<<<<<<<<<<<<<2Dvector of pair>>>>>>>>>>>
+vector<pair<int,int>>adj[100];
+adj[0].push_back(make_pair(1,2));
+
+
+<<<<<set of pair>>>>>>>>>>>>>
+// C++ program to create Set of Pairs 
+
+#include <bits/stdc++.h> 
+using namespace std; 
+
+typedef pair<int, int> pairs; 
+
+// Constant reference 
+// reference for speed const to avoid changing values 
+void display(const set<pairs>& s) 
+{ 
+	bool found = false; 
+
+	// range-based for loop 
+	for (auto const &x : s) { 
+		found = true; 
+		cout << "(" << x.first << ", "
+			<< x.second << ")"
+			<< " "; 
+	} 
+
+	if (not found) { 
+		cout << "No valid pair\n"; 
+	} 
+} 
+int main() 
+{ 
+	vector<int> v{ 2, 3, 1, 6, 8, 8, 10, 2 }; 
+	set<pairs> s; 
+	
+	
+
+	for (int i = 0; i < v.size() - 1; i++) { 
+		for (int j = i + 1; j < v.size(); j++) { 
+
+			// check for even number 
+			if (v[i] % 2 == 0 && v[j] % 2 == 0) { 
+
+				// makes pairs of even numbers 
+				pairs x = make_pair(v[i], v[j]); 
+
+				// inserts into the set 
+				s.insert(x); 
+			} 
+		} 
+	} 
+
+	// to display the pairs 
+	display(s); 
+
+	// to clear the set 
+	s.clear(); 
+} 
+///print (2, 2) (2, 6) (2, 8) (2, 10) (6, 2) (6, 6) (6, 8) (6, 10) (8, 2) (8, 8) (8, 10) (10, 2) (10, 10)

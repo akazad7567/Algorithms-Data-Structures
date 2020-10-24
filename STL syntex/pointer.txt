@@ -1,0 +1,74 @@
+#include<bits/stdc++.h>
+<<<<<print address of a variable>>>>>>>
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int val=10;
+    printf("%p\n",&val);//print address of val
+}
+
+<<<<<<one pointer>>>>>>>>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int var=10;
+    int *ptr;//since there is * in declaration, ptr
+    // becomes a pointer varaible (a variable
+    // that stores address of another variable)
+    ptr=&var;
+   
+    printf("%d\n",*ptr);//print 10
+}
+
+
+<<<<<<<<<one and two pointer>>>>>>>>
+
+using namespace std;
+
+int main()
+{
+    int var=10;
+    int *ptr=&var;
+    cout<<*ptr<<' '<<var<<endl;//print 10 10
+    *ptr=20;
+    cout<<*ptr<<' '<<var<<endl;//print 20 20
+    var=30;
+    cout<<*ptr<<' '<<var<<endl;//print 30 30
+    int **ptr1=&ptr;//two pointer point a pointer
+    **ptr1=40;
+    cout<<*ptr<<' '<<**ptr1<<' '<<var<<endl;//print 40 40 40
+    var=50;
+    cout<<*ptr<<' '<<**ptr1<<' '<<var<<endl;//print 50 50 50
+}
+
+<<<<<<<<<point an array>>>>>>>>>>>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int v[3]={10,20,30};
+    int *ptr;
+    ptr=v;
+    for(int i=0;i<3;i++)
+    {
+        printf("%d ",*ptr);
+        //printf("%d\n",ptr);
+        ptr++;
+    }
+    printf("\n");
+    ptr=v;
+    printf("%d %d %d \n",ptr[0],ptr[1],ptr[2]);
+    int var=20;
+    ptr=&var;
+    cout<<*ptr<<endl;
+    var=30;
+    cout<<var<<endl;
+    cout<<*ptr<<endl;
+}
+

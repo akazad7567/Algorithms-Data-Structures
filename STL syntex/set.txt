@@ -1,0 +1,4 @@
+<<<<<<<<<<<set of pair>>>>>>>>>>>>>>
+    set<pair<int,int>>cells;
+    cells.insert({r,c});//insert r and c in the set
+    cells.erase({r,c}); //delete r and c from the set

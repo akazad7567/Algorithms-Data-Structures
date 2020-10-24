@@ -1,0 +1,8 @@
+<<<<<ignore buffering>>>>
+cin.ignore();
+
+<<<<<<<<<run time>>>>>
+double start_time=clock()///first line on the code
+double end_time=clock(); //last line on the code
+
+cout<<((end_time-start_time)/CLOCKS_PER_SEC*1000)<<endl;

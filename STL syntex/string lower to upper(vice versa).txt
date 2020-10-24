@@ -1,0 +1,5 @@
+string ch,ch2;
+cin>>ch>>ch2;
+
+transform(ch.begin(),ch.end(),ch.begin(),::tolower);
+transform(ch2.begin(),ch2.end(),ch2.begin(),::toupper);

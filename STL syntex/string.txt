@@ -1,0 +1,14 @@
+<<<<<<<<<<<stringstream>>>>>>>>>>>>>
+    string str;
+    getline(cin,str);string str;
+    getline(cin,str);
+    stringstream ss(str);
+    string word;
+    while(ss>>word)
+    {
+        cout<<word<<endl;
+    }
+
+<<<<<<find position of character in string>>>>>>>>>>>>>
+s_size pos=str.find('c');
+  
