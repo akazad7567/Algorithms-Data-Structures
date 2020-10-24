@@ -26,9 +26,9 @@ void prims(vector<pr>adj[],int n)
      vector<int>key(n,INF),key2(n,0);
      vector<int>prnt(n,-1);
      vector<bool>inMST(n,false);
-     int src=0;
+     int src=1;
      key[src]=0;
-     inMST[0]=true;
+     inMST[src]=true;
      priority_queue<pr,vector<pr>,greater<pr>>pq;
      pq.push({0,src});
      int ans=0;
@@ -55,6 +55,7 @@ void prims(vector<pr>adj[],int n)
          }
      }
      cout<<ans<<endl;
+     cout<<"ans = "<<key[n]<<endl;
      for(int i=1;i<n;i++)
      {
          printf("%d %d->%d\n",prnt[i],i,key[i]);

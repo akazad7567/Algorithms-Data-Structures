@@ -30,7 +30,7 @@ int main()
     int n,edge;
     scanf("%d %d",&n,&edge);
 
-    for (int i=0;i<n;i++)
+    for (int i=0;i<edge;i++)
     {
         int a, b;
         scanf("%d %d",&a,&b);

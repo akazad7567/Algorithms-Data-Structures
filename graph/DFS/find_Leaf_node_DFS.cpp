@@ -13,7 +13,7 @@ void dfs( int node, int parent)
 
         // There is at least a child
         // of the current node
-        if (ir != parent)
+        if (ir != parent)//"node" er child jodi "node" er bap na hoy or amr child jodi amr bap na hoy
         {
             flag = 0;
             dfs(ir, node);
