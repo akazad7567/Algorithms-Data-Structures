@@ -1,0 +1,175 @@
+
+<<<<<<map of pair ->>>>
+map<int,int>mp;
+mp.insert(pair<int,int>(1,40));
+mp.insert(pair<int,int>(2,30));
+map<int,int>::iterator it;
+
+for(it=mp.beigin();it!=mp.end();++it)
+cout<<it.first<<"->"<<it.second<<'\n';
+//print  1->40 
+         2->30
+
+<<<<<<<<assigning the element form one map to anoter map>>>>
+
+map<int,int>mp2(mp.begin(),mp.end());
+for(auto it=mp2.begin();it!=mp2.end();++it)
+cout<<mp2.first<<"->"<<mp2.second<<'\n';
+//print 1->40
+        2->30
+
+
+<<<<<<remove all elements 'up to key 2' >>>>>>
+
+mp2.erase(mp2.begin(),mp2.find());
+
+for(auto it=mp2.begin();it!=end();++it)
+cout<<it.first<<"->"<<it.second<<endl;
+//print  2->30
+
+mp2.insert(pair<int,int>(3,50));
+
+<<<<<<remove all elements with key = 2>>>>
+for(auto it=mp2.begin();it!=end();++it)
+cout<<it.first<<"->"<<it.second<<endl;
+//print  3->50
+
+mp2.insert(pair<int,int>(4,60));
+
+<<<<<lower_bound of 3>>>>
+
+cout<<lower_bound(3).first<<"->"<<lower_bound(3).second<<endl;
+
+//print 3->50;
+
+<<<<<<<upper_bound of 3>>>>>
+cout<<upper_bound(3).first<<"->"<<upper_bound(3).second<<endl;
+
+//print 4->60;
+
+<<<<<<<<For example consider a simple problem, given a matrix and 
+positions visited, print which positions are not visited>>>>>>>>>
+
+// C++ program to demonstrate use of map 
+// for pairs 
+#include <bits/stdc++.h> 
+using namespace std; 
+
+map<pair<int, int>, int> vis; 
+
+// Print positions that are not marked 
+// as visited 
+void printPositions(int a[3][3]) 
+{ 
+	for (int i = 0; i < 3; i++) 
+		for (int j = 0; j < 3; j++) 
+			if (vis[{ i, j }] == 0) 
+				cout << "(" << i << ", " << j << ")"
+					<< "\n"; 
+} 
+
+int main() 
+{ 
+	int mat[3][3] = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 } }; 
+
+	// Marking some positions as visited 
+	vis[{ 0, 0 }] = 1; // visit (0, 0) 
+	vis[{ 1, 0 }] = 1; // visit (1, 0) 
+	vis[{ 1, 1 }] = 1; // visit (1, 1) 
+	vis[{ 2, 2 }] = 1; // visit (2, 2) 
+
+	// print which positions in matrix are not visited by rat 
+	printPositions(mat); 
+	return 0; 
+} 
+
+
+//print  
+(0, 1)
+(0, 2)
+(1, 2)
+(2, 0)
+(2, 1)
+
+
+
+<<<<<<<    // find() function finds the position at which '3 is '>>>
+cout<<mp.find(3);
+
+<<<<<< map erase() function in C++ STL>>>>>>>>>>
+/*map::erase() is a built-in function in C++ STL which is used to erase 
+element from the container. It can be used to erase keys, elements at any
+ specified position or a given range. */
+
+Syntax for erasing a key->map_name.erase(key);
+<<<<<erasing all element in map>>>>>
+mp.clear();
+
+<<<<<<erases 2nd element>>>>
+it = mp.begin(); 
+++it; 
+mp.erase(it); 
+
+
+<<<<<<<<<<<use of map for vectors>>>>>>>>>> 
+
+#include <bits/stdc++.h> 
+using namespace std; 
+
+map<vector<int>, int> vis; 
+
+// Print True if vector is visited 
+// or False if not visited 
+void CheckVisited(vector<int> data) 
+{ 
+	if (vis.find(data) != vis.end()) { 
+		cout << "True" << endl; 
+	} 
+	else { 
+		cout << "False" << endl; 
+	} 
+} 
+
+// Driver code 
+int main() 
+{ 
+	// Initializing some vectors 
+	vector<int> data_1{ 10, 20, 30, 40 }; 
+	vector<int> data_2{ 5, 10, 15 }; 
+	vector<int> data_3{ 1, 3, 5, 7, 9, 11, 13 }; 
+
+	// Making some vectors as visited 
+	vis[data_1] = 1; 
+	vis[data_2] = 1; 
+	vis[data_3] = 1; 
+
+	// checking if these vectors are 
+	// visited or not 
+	vector<int> check_1 = { 5, 10, 15 }; 
+	vector<int> check_2 = { 2, 4, 6, 8, 10, 12 }; 
+
+	CheckVisited(check_1); 
+	CheckVisited(check_2); 
+	return 0; 
+}
+
+print->True 
+       False
+
+<<<<<<<<<<<Map of vector>>>>>>>>>
+map<string,vector<string>>graph;
+//same as 2d vector
+
+
+<<<<<<<<<<<<<<map of map>>>>>>>>>>>
+    map<int,map<int,int>>mp;//like 2d array
+
+
+
+
+
+
+
+ 
+
+

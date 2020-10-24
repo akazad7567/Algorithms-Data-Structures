@@ -1,0 +1,172 @@
+
+<<<<<<<find student result as following some condition
+1.sort students as theire total marks;
+2.if total marks are same then sort students as theire math marks;
+3.if math marks are same then sort students as theire physhics marks
+4.if physhics marks are same then sort students as theire chemestry marks;
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+struct students
+{
+    string name;
+    int phy,che,math;
+    int tot;
+};
+
+bool compare(students a,students b)
+{
+    if(a.tot!=b.tot) return a.tot>b.tot;
+    if(a.math!=b.math)  return a.math>b.math;
+    if(a.phy!=b.phy) return a.phy>b.phy;
+
+    return a.che>b.che;
+}
+void build(students ar[],int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        ar[i].tot=ar[i].phy+ar[i].che+ar[i].math;
+    }
+
+    sort(ar,ar+n,compare);
+
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    students ar[n];
+
+    for(int i=0;i<n;i++)
+    {
+        string str;
+        int p,c,m;
+        cin>>str;
+        cin>>m>>p>>c;
+
+        ar[i].name=str;
+        ar[i].phy=p;
+        ar[i].che=c;
+        ar[i].math=m;
+    }
+
+    build(ar,n);
+
+    for(int i=0;i<n;i++)
+    {
+
+        cout<<ar[i].name<<' '<<ar[i].math<<' '<<ar[i].phy<<' '<<ar[i].che<<endl;
+    }
+
+}
+
+
+<<<<<<<<<<fractional knapsack>>>>>>>>
+#include<bits/stdc++.h>
+using namespace std;
+#define INF 0x3f3f3f3f
+typedef pair<int,int>PII;
+typedef long long ll;
+
+bool cmp(pair<int,int>a,pair<int,int>b)
+{
+    return a.second*b.first>a.first*b.second;
+}
+
+int main()
+{
+    vector<PII>v;
+
+    int n;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        int price,weight;
+        scanf("%d %d",&weight,&price);
+        v.push_back(PII(weight,price));
+    }
+    sort(v.begin(),v.end(),cmp);
+//    cout<<endl;
+//    for(int i=0;i<n;i++)
+//    {
+//        cout<<v[i].first<<' '<<v[i].second<<endl;
+//    }
+    int w,ans=0;
+    scanf("%d",&w);
+    for(int i=0;i<n;i++)
+    {
+        int z=min(w,v[i].first);
+        w-=z;
+        ans+=(((double)v[i].second/v[i].first)*z);
+
+
+    }
+    printf("Maximum cost: %d\n",ans);
+}
+
+
+//////////sort second of pair and keeping first/////////////////
+// C++ program to demonstrate sorting in vector 
+// of pair according to 2nd element of pair 
+#include<bits/stdc++.h> 
+using namespace std; 
+
+// Driver function to sort the vector elements 
+// by second element of pairs 
+bool sortbysec(const pair<int,int> &a, 
+			const pair<int,int> &b) 
+{ 
+	return (a.second < b.second); 
+} 
+
+int main() 
+{ 
+	// declaring vector of pairs 
+	vector< pair <int, int> > vect; 
+
+	// Initialising 1st and 2nd element of pairs 
+	// with array values 
+	int arr[] = {10, 20, 5, 40 }; 
+	int arr1[] = {30, 60, 20, 50}; 
+	int n = sizeof(arr)/sizeof(arr[0]); 
+
+	// Entering values in vector of pairs 
+	for (int i=0; i<n; i++) 
+		vect.push_back( make_pair(arr[i],arr1[i]) ); 
+
+	// Printing the original vector(before sort()) 
+	cout << "The vector before sort operation is:\n" ; 
+	for (int i=0; i<n; i++) 
+	{ 
+		// "first" and "second" are used to access 
+		// 1st and 2nd element of pair respectively 
+		cout << vect[i].first << " "
+			<< vect[i].second << endl; 
+
+	} 
+
+	// Using sort() function to sort by 2nd element 
+	// of pair 
+	sort(vect.begin(), vect.end(), sortbysec); 
+
+	// Printing the sorted vector(after using sort()) 
+	cout << "The vector after sort operation is:\n" ; 
+	for (int i=0; i<n; i++) 
+	{ 
+		// "first" and "second" are used to access 
+		// 1st and 2nd element of pair respectively 
+		cout << vect[i].first << " "
+			<< vect[i].second << endl; 
+	} 
+	return 0; 
+} 
+//print
+5 20
+10 30
+40 50
+20 60
