@@ -1,0 +1,46 @@
+<<<<<vector of pair>>>>
+typedef pair<int,int>PII;
+vector<PII>>vec;
+vec.push_back({1,2});
+cout<<vec[0].first<<' '<<vec[0].second<<endl; //1 2
+
+
+<<<2D vector of pair>>>>>
+typedef pair<int,int>PII;
+vector<PII>vec[500];
+vec[0].push_back({1,2});
+cout<<vec[0].first<<' '<<vec[0].second<<endl;//1 2
+
+<<<<2D pair of pair>>>>>
+pair<int,pair<int,int>>p[500];
+p[0].push_back({1,{2,10}});
+cout<<p[0].first<<' '<<p[0].second.first<<' '<<p[0].second.second<<endl;//1 2 10
+
+<<<<<<<<map of vector>>>>>>
+    map<string,vector<string>>str;
+    str["fly"].push_back("first");
+    str["fly"].push_back("second");
+    for(auto it:str["fly"]) cout<<it<<' ';//fisrt second
+
+<<<<<<<<<<map of map>>>>>>>
+<<<<<<<<<<<<<<map of map>>>>>>>>>>>
+    map<string,map<string,int>>mp;//like 2d array
+
+
+<<<<<map er accessing>>>>>
+
+   map<char,int>mp;
+   mp['a']=10;
+   mp['c']=20;
+   mp['z']=100;
+//   map<char,int>::iterator it;
+   for(auto it=mp.begin();it!=mp.end();++it) cout<<it->first<<'='<<it->second<<endl;
+//must use it->first,don't use it.first
+*/
+a=10
+c=20
+z=100
+*/
+
+
+

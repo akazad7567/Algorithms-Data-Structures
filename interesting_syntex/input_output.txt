@@ -1,0 +1,11 @@
+<<<<end of string>>>>
+while(getline(cin,line) and line!="")
+<<<<end of integer>>>
+while(scanf("%d %d",&a,&b)==2)
+{
+}
+
+<<<<<time consume>>>>>>>
+ios:Sync_with_stdio(false);
+cin.tie(0);
+out.tie(0);

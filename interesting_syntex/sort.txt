@@ -1,0 +1,10 @@
+<<<<<<Normal>>>>
+sort(ar,ar+n);
+or sort(&ar[0],ar[n]);
+
+<<<<sort in decending order>>>>>
+
+sort(ar,ar+n,greater<int>())
+
+<<<<<structure sort>>>>>>
+sort(ar,ar+n,compare)//compare catch the boolian value

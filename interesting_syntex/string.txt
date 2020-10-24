@@ -1,0 +1,11 @@
+
+<<<<<spilit a string>>>>>
+string str;
+getline(cin,str);
+stringstream ss(str);
+
+int tmp;//input must be this type of data
+while(ss>>tmp)
+{
+cout<<tmp;//erasing space and initialized a word to the left to right
+}

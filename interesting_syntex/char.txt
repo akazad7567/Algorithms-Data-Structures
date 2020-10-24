@@ -1,0 +1,6 @@
+
+<<<<<<<<pointer>>>>>>
+    char *name;
+    name="ak azad";//must be initialized
+    printf("%s\n",name);
+//pirnt ak azad

@@ -1,0 +1,20 @@
+
+
+<<<<<<1st output er jonno new line print korbe na>>>>>>>>>
+p=false;//declare on before while loop
+if(p) printf ("\n");p = true;
+
+<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>
+    int a;
+    a=10;
+    a=10? 100:200;
+    cout<<a<<endl;
+//print 100
+
+
+<<<<<<<<>>>>>>>>>>
+    int a,b;
+    a=10,b=5;
+    a+b==11? printf("Yes\n"):printf("NO\n");
+
+//print NO

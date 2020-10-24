@@ -1,0 +1,6 @@
+<<<<<ignore buffering>>>>
+cin.ignore();
+<<<vector assign>>
+vec.assign(n,false);
+<<<array assign>>>>
+fill(vis,vis+n,false);
