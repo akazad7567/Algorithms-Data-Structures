@@ -17,6 +17,7 @@ void sparse_table(int N,int K)
 {
     for(int i=0;i<N;i++)
     {
+
         st[i][0]=ar[i];
     }
 

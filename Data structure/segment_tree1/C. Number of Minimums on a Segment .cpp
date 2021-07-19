@@ -82,6 +82,7 @@ int main()
 {
     int n,m;
     segtree st;
+
     scanf("%d %d",&n,&m);
     st.init(n);
     vector<int>a(n);

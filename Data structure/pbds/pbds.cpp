@@ -18,8 +18,8 @@ int main()
 	p.insert(2);
 	p.insert(6);
 	p.insert(4);
-
-	// value at 3rd index in sorted array.
+//
+//	// value at 3rd index in sorted array.
 	cout << "The value at 3rd index ::"
 		<< *p.find_by_order(3) << endl;
 
