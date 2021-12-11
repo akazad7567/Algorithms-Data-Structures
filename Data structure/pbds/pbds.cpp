@@ -18,6 +18,8 @@ int main()
 	p.insert(2);
 	p.insert(6);
 	p.insert(4);
+	p.insert(4);
+	cout<<p.size()<<endl;
 //
 //	// value at 3rd index in sorted array.
 	cout << "The value at 3rd index ::"
@@ -49,6 +51,13 @@ int main()
 
     cout<<*p.lower_bound(5)<<' '<<*p.lower_bound(2)<<endl;
     cout<<*p.upper_bound(5)<<endl;
+
+     order_set os[26];
+     int sm=0,x=0,y=5;
+
+    for(int i=0;i<26;i++)
+    if(os[i].order_of_key(x)!=os[i].order_of_key(y+1)) sm++;//jodi x theke y er majhe 'i' pawya jay then sm++ hobe
+    cout<<sm<<endl;
 
 	return 0;
 }
